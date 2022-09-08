@@ -1,0 +1,18 @@
+<h1>Donut</h1>
+<button [routerLink]="['/cart', donut?.id]"> Add to Cart</button>
+<div>
+    Name:{{donut?.name}} <br>
+    Calories: {{donut?.calories}}  <br>
+    Extras:
+    <ul>
+        <ng-container *ngFor="let d of donut?.extras">
+            <li>
+                {{d}}
+            </li>
+        </ng-container>
+    </ul> 
+    <img src="{{donut?.photo}}" width="200" height="200"><br>
+Photo attribution: <a href="{{donut?.photo_attribution}}">{{donut?.photo_attribution}}</a>
+    
+</div>
+

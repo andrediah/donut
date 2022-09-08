@@ -1,0 +1,8 @@
+<h1>Donuts</h1>
+<ul>
+    <ng-container *ngFor="let d of donuts?.results">
+        <li>
+            <a href="/detail/{{d.id}}">{{d.name}}</a>
+        </li>
+    </ng-container>
+</ul>

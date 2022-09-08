@@ -1,0 +1,26 @@
+<h1>Shopping Cart</h1>
+<table> 
+    <thead>
+        <tr>
+            <th>Donut </th>
+            <th>Calories </th>
+            <th>Price </th>
+            <th> </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of cartItems">
+            <td>{{d.itemName}}</td>
+            <td>{{d.Calories}}</td>
+            <td>{{d.Price | currency}}</td>
+            <td><button (click)="removeitem(d.itemName)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>
+
+Total Calories : {{totalCalories}}<br>
+Total Price : {{totalCost | currency}}
+
+<button [routerLink]="['/list']">Continue Shopping</button>
+<button (click)="clearCart()">Empty Cart</button>
