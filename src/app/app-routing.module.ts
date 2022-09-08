@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'cart/:id', component: CartComponent},
   {path: 'detail/:id', component: DetailComponent},
   {path: '', redirectTo: '/list',pathMatch:'full'},
-  {path: '*', component:NotFoundComponent }
+  {path: '**', component:NotFoundComponent }
 ];
 
 @NgModule({
